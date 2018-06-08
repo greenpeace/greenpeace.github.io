@@ -5,6 +5,8 @@ document.addEventListener("DOMContentLoaded", function() {
 	let currentSlide  = 0;
 	let next          = document.getElementById('next');
 	let previous      = document.getElementById('previous');
+	let large_slides  = document.querySelectorAll('#large_slides .slide');
+	let medium_slides = document.querySelectorAll('#medium_slides .slide');
 	//let slideInterval = setInterval(nextSlide,2000);
 
 	let large_button  = document.getElementsByClassName("large-button")[0];
@@ -16,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		large_box.style.display  = "block";
 		medium_box.style.display = "none";
 		slides[currentSlide].className = 'slide';
-		slides = document.querySelectorAll('#large_slides .slide');
+		slides = large_slides;
 		goToSlide(0);
 	});
 
@@ -24,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		medium_box.style.display = "block";
 		large_box.style.display  = "none";
 		slides[currentSlide].className = 'slide';
-		slides = document.querySelectorAll('#medium_slides .slide');
+		slides = medium_slides;
 		goToSlide(0);
 	});
 
