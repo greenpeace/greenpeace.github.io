@@ -15,13 +15,17 @@ document.addEventListener("DOMContentLoaded", function() {
 	large_button.addEventListener("click", function (event) {
 		large_box.style.display  = "block";
 		medium_box.style.display = "none";
+		slides[currentSlide].className = 'slide';
 		slides = document.querySelectorAll('#large_slides .slide');
+		goToSlide(0);
 	});
 
 	medium_button.addEventListener("click", function (event) {
 		medium_box.style.display = "block";
 		large_box.style.display  = "none";
+		slides[currentSlide].className = 'slide';
 		slides = document.querySelectorAll('#medium_slides .slide');
+		goToSlide(0);
 	});
 
 	next.onclick = function() {
