@@ -13,91 +13,197 @@
 				Planet 4 Image Testing
 			</h1>
 			<h3>Trying different combinations of compression / resizing / sharpening algorithms for P4 images.</h3>
-			<p>Dimensions 1024x661 (Large)
+			<button class="size-button large-button">Large  (1024x661)</button>
+			<button class="size-button medium-button">Medium (300x194)</button>
 		</div>
 
-		<br />
-		<strong>1st image (configuration currently used by P4)</strong>
-		<br />
-		Resize: Triangle
-		<br />
-		Sharpening: unsharpMask ( Radius 0.25, Sigma 0.25, Amount 8, Threshold 0.065 )
-		<br />
-		Compression: Interlace_No
-		<br />
-		Quality: 90
-		<br />
-		Size: 116 kb
-		<br /><br />
-		<img class="alignnone size-large wp-image-1977" src="images/2e57d522-original-gp0stppn4_pressmedia-1024x661.jpg" alt="" width="1024" height="661" />
-		<br /><br />
-
-		<strong>2nd image</strong>
-		<br />
-		Resize: Lanczos
-		<br />
-		Sharpening: unsharpMask( Radius 0.25, Sigma 0.25, Amount 8, Threshold 0.065 )
-		<br />
-		Compression: Interlace_Plane
-		<br />
-		Quality: 82
-		<br />
-		Size: 87.3 kb
-		<br /><br />
-		<img class="alignnone size-large wp-image-1983" src="images/b3e752b9-8-plane-lanczos-q82-unsharpmask_025_025_8_0065-1024x661.jpg" alt="" width="1024" height="661" />
-		<br /><br />
-
-		<strong>3rd image</strong>
-		<br />
-		Resize: Lanczos
-		<br />
-		Sharpening: unsharpMask( Radius 1, Sigma 0.45, Amount 3, Threshold 0 )
-		<br />
-		Compression: Interlace_Plane
-		<br />
-		Quality: 82
-		<br />
-		Size: 110 kb
-		<br /><br />
-		<img class="alignnone size-large wp-image-1996" src="images/cd16a183-8-plane-lanczos-q82-unsharpmask_1_045_3_0-1024x661.jpg" alt="" width="1024" height="661" />
-		<br /><br />
-
-		<strong>4th image</strong>
-		<br />
-		Resize: Lanczos
-		<br />
-		Sharpening: adaptiveSharpen( Radius 5, Sigma 1.5 )
-		<br />
-		Compression: Interlace_Plane
-		<br />
-		Quality: 82
-		<br />
-		Size: 107 kb
-		<br /><br />
-		<img class="alignnone size-large wp-image-1999" src="images/de5927fc-8-plane-lanczos-q82-adaptivesharpen_5_150-1024x661.jpg" alt="" width="1024" height="661" />
-		<br /><br />
-
-		<strong>5th image</strong>
-		<br />
-		Method used by NZ office (using Photoshop)
-		<br />
-		Size:
-		<br /><br />
-
-		<strong>6th image</strong>
-		<br />
-		Resize: Gaussian
-		<br />
-		Sharpening: unsharpMask( Radius 0.25, Sigma 0.25, Amount 8, Threshold 0.065 )
-		<br />
-		Compression: Interlace_Plane
-		<br />
-		Quality: 82
-		<br />
-		Size: 78.8 kb
-		<br /><br />
-		<img class="alignnone size-large wp-image-1986" src="images/f05a641c-8-plane-gaussian-q82-unsharpmask_025_025_8_0065-1024x661.jpg" alt="" width="1024" height="661" />
-		<br /><br />
+		<div class="buttons">
+			<button class="controls" id="previous" style="display: inline-block;">&lt; Prev</button>
+			<button class="controls" id="next" style="display: inline-block;">Next &gt;</button>
+		</div>
+		<div class="box large-box">
+			<div class="slideshow">
+				<ul id="large_slides" class="slides">
+					<li class="slide showing">
+						<div class="info">
+							<strong>1st image (configuration currently used by P4)</strong>
+							<br />
+							Resize: Triangle
+							<br />
+							Sharpening: unsharpMask ( Radius 0.25, Sigma 0.25, Amount 8, Threshold 0.065 )
+							<br />
+							Compression: Interlace_No
+							<br />
+							Quality: 90
+							<br />
+							Size: 116 kb
+							<br />
+						</div>
+						<img class="alignnone size-large wp-image-1977" src="images/large/2e57d522-original-gp0stppn4_pressmedia-1024x661.jpg" alt="" width="1024" height="661" />
+					</li>
+					<li class="slide">
+						<div class="info">
+							<strong>2nd image</strong>
+							<br />
+							Resize: Lanczos
+							<br />
+							Sharpening: unsharpMask( Radius 0.25, Sigma 0.25, Amount 8, Threshold 0.065 )
+							<br />
+							Compression: Interlace_Plane
+							<br />
+							Quality: 82
+							<br />
+							Size: 87.3 kb
+							<br />
+						</div>
+						<img class="alignnone size-large wp-image-1983" src="images/large/b3e752b9-8-plane-lanczos-q82-unsharpmask_025_025_8_0065-1024x661.jpg" alt="" width="1024" height="661" />
+					</li>
+					<li class="slide">
+						<div class="info">
+							<strong>3rd image</strong>
+							<br />
+							Resize: Lanczos
+							<br />
+							Sharpening: unsharpMask( Radius 1, Sigma 0.45, Amount 3, Threshold 0 )
+							<br />
+							Compression: Interlace_Plane
+							<br />
+							Quality: 82
+							<br />
+							Size: 110 kb
+							<br />
+						</div>
+						<img class="alignnone size-large wp-image-1996" src="images/large/cd16a183-8-plane-lanczos-q82-unsharpmask_1_045_3_0-1024x661.jpg" alt="" width="1024" height="661" />
+					</li>
+					<li class="slide">
+						<div class="info">
+							<strong>4th image</strong>
+							<br />
+							Resize: Lanczos
+							<br />
+							Sharpening: adaptiveSharpen( Radius 5, Sigma 1.5 )
+							<br />
+							Compression: Interlace_Plane
+							<br />
+							Quality: 82
+							<br />
+							Size: 107 kb
+							<br />
+						</div>
+						<img class="alignnone size-large wp-image-1999" src="images/large/de5927fc-8-plane-lanczos-q82-adaptivesharpen_5_150-1024x661.jpg" alt="" width="1024" height="661" />
+					</li>
+					<li class="slide">
+						<div class="info">
+							<strong>5th image</strong>
+							<br />
+							Resize: Gaussian
+							<br />
+							Sharpening: unsharpMask( Radius 0.25, Sigma 0.25, Amount 8, Threshold 0.065 )
+							<br />
+							Compression: Interlace_Plane
+							<br />
+							Quality: 82
+							<br />
+							Size: 78.8 kb
+							<br />
+						</div>
+						<img class="alignnone size-large wp-image-1986" src="images/large/f05a641c-8-plane-gaussian-q82-unsharpmask_025_025_8_0065-1024x661.jpg" alt="" width="1024" height="661" />
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="box medium-box">
+			<div class="slideshow">
+				<ul id="medium_slides" class="slides">
+					<li class="slide showing">
+						<div class="info">
+							<strong>1st image (configuration currently used by P4)</strong>
+							<br />
+							Resize: Triangle
+							<br />
+							Sharpening: unsharpMask ( Radius 0.25, Sigma 0.25, Amount 8, Threshold 0.065 )
+							<br />
+							Compression: Interlace_No
+							<br />
+							Quality: 90
+							<br />
+							Size: 16.2 kb
+							<br />
+						</div>
+						<img class="alignnone size-medium wp-image-1977" src="images/medium/2e57d522-original-gp0stppn4_pressmedia-300x194.jpg" alt="" width="300" height="194" />
+					</li>
+					<li class="slide">
+						<div class="info">
+							<strong>2nd image</strong>
+							<br />
+							Resize: Lanczos
+							<br />
+							Sharpening: unsharpMask( Radius 0.25, Sigma 0.25, Amount 8, Threshold 0.065 )
+							<br />
+							Compression: Interlace_Plane
+							<br />
+							Quality: 82
+							<br />
+							Size: 12.7 kb
+							<br />
+						</div>
+						<img class="alignnone size-medium wp-image-1983" src="images/medium/b3e752b9-8-plane-lanczos-q82-unsharpmask_025_025_8_0065-300x194.jpg" alt="" width="300" height="194" />
+					</li>
+					<li class="slide">
+						<div class="info">
+							<strong>3rd image</strong>
+							<br />
+							Resize: Lanczos
+							<br />
+							Sharpening: unsharpMask( Radius 1, Sigma 0.45, Amount 3, Threshold 0 )
+							<br />
+							Compression: Interlace_Plane
+							<br />
+							Quality: 82
+							<br />
+							Size: 16.5 kb
+							<br />
+						</div>
+						<img class="alignnone size-medium wp-image-1996" src="images/medium/cd16a183-8-plane-lanczos-q82-unsharpmask_1_045_3_0-300x194.jpg" alt="" width="300" height="194" />
+					</li>
+					<li class="slide">
+						<div class="info">
+							<strong>4th image</strong>
+							<br />
+							Resize: Lanczos
+							<br />
+							Sharpening: adaptiveSharpen( Radius 5, Sigma 1.5 )
+							<br />
+							Compression: Interlace_Plane
+							<br />
+							Quality: 82
+							<br />
+							Size: 15.9 kb
+							<br />
+						</div>
+						<img class="alignnone size-medium wp-image-1999" src="images/medium/de5927fc-8-plane-lanczos-q82-adaptivesharpen_5_150-300x194.jpg" alt="" width="300" height="194" />
+					</li>
+					<li class="slide">
+						<div class="info">
+							<strong>5th image</strong>
+							Resize: Gaussian
+							<br />
+							<br />
+							Sharpening: unsharpMask( Radius 0.25, Sigma 0.25, Amount 8, Threshold 0.065 )
+							<br />
+							Compression: Interlace_Plane
+							<br />
+							Quality: 82
+							<br />
+							Size: 11.1 kb
+							<br />
+						</div>
+						<img class="alignnone size-medium wp-image-1986" src="images/medium/f05a641c-8-plane-gaussian-q82-unsharpmask_025_025_8_0065-300x194.jpg" alt="" width="300" height="194" />
+					</li>
+				</ul>
+			</div>
+		</div>
 	</div>
+	<script type="text/javascript" src="script.js"></script>
 </body>
 </html>
