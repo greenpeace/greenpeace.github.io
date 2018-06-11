@@ -49,6 +49,15 @@ document.addEventListener("DOMContentLoaded", function() {
 		previousSlide();
 	};
 
+	document.onkeydown = function switchSlideWithArrows(event) {
+		event.preventDefault();
+		if ( 37 === event.keyCode ) {
+			previousSlide();
+		} else if ( 39 === event.keyCode ) {
+			nextSlide();
+		}
+	};
+
 	function nextSlide() {
 		goToSlide(currentSlide+1);
 	}
